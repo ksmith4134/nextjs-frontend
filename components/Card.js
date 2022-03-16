@@ -24,7 +24,7 @@ export default function Card(props) {
           <Link href={`/posts/${post.id}`}><a className='text-blue-500 hover:cursor-pointer hover:underline hover:underline-offset-4 font-semibold'>Learn More &gt;</a></Link>
         </div>
         <div>
-          {/* <PostImage imgURL={post.attributes.profile.data.attributes.url} classes={"rounded-3xl"} /> */}
+          <PostImage imgURL={post.attributes.profile.data.attributes.url} classes={"rounded-3xl"} />
         </div>
       </div>
     </div>
