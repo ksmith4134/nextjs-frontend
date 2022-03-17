@@ -10,7 +10,7 @@ export default function Card(props) {
 
   // Push a Post's category id's into its own array
   const ids =[];
-  post.attributes.categories.data.map((category) => {ids.push(category.id)})
+  post.attributes.categories.data.map((category) => {ids.push(parseInt(category.id))})
 
   // If that array contains an id that equals the Tab's category id, then show that post
   return (

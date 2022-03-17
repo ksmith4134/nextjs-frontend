@@ -23,7 +23,7 @@ export default function PostPage({ post, contentHtml }) {
 
 // Generate all the post pages for each id
 export async function getStaticPaths() {
-  const res = await fetch('https://shrouded-brushlands-64807.herokuapp.com/api/posts')
+  const res = await fetch(`${process.env.API_URL}/api/posts`)
   const postRes = await res.json()
 
   const paths = postRes.data.map((post) => {
@@ -39,7 +39,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
 
   // get single post using id from getStaticPaths
- const res = await fetch(`https://shrouded-brushlands-64807.herokuapp.com/api/posts/${params.id}`)
+ const res = await fetch(`${process.env.API_URL}/api/posts/${params.id}`)
  const postRes = await res.json()
 
  // render markdown
