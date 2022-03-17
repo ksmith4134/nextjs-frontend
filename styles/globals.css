@@ -5,7 +5,7 @@
 @layer components {
   .card {
     background-color: theme('colors.white');
-    border-radius: theme('borderRadius.3xl');
+    border-radius: theme('borderRadius.2xl');
     /* padding: theme('spacing.6'); */
     box-shadow: theme('boxShadow.lg');
     max-width: 350px;

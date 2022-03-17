@@ -14,7 +14,7 @@ export default function TabGallery(props) {
   const [selectedTab, setSelectedTab] = useState(1)
 
   const tabChange = (id) => {
-    setSelectedTab(id)
+    setSelectedTab(parseInt(id))
   }
 
   return (
