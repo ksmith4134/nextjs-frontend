@@ -18,11 +18,12 @@ export default function PostPage({ post, contentHtml }) {
 // Generate all the post pages for each id
 export async function getStaticPaths() {
   const posts = await getPosts()
-  const paths = posts.data.map((post) => {
+  /* const paths = posts.data.map((post) => {
     return {params: {id: post.id.toString()}}
-  })
+  }) */
   return {
-    paths,
+    /* paths, */
+    paths: posts.data.map(post => `/posts/${post.id}`),
     fallback: false
   }
 }

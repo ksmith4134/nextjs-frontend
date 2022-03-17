@@ -3,7 +3,6 @@ import TabGallery from "../components/TabGallery"
 import { getPosts, getCategories } from '../lib/api'
 
 export default function Home({ posts, categories}) {
-
   return (
     <div>
       <div className="flex place-content-center mt-6">
