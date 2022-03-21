@@ -15,8 +15,8 @@ export default function Nav() {
           </Link>
         </li>
         <li className="flex">
-          <Link href="/tables">
-            <a className="text-xl text-black-600 hover:text-blue-500">Tables</a>
+          <Link href="/featurette">
+            <a className="text-xl text-black-600 hover:text-blue-500">Featurette</a>
           </Link>
         </li>
       </ul>

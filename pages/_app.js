@@ -3,9 +3,9 @@ import Nav from '../components/Nav'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className=''>
+    <div>
       <Nav />
-      <div className="px-10 mt-20">
+      <div>
         <Component {...pageProps} />
       </div>
     </div>

@@ -5,7 +5,7 @@ import { getPosts, getCategories } from '../lib/api'
 export default function Home({ posts, categories}) {
   return (
     <div>
-      <div className="flex place-content-center mt-6">
+      <div className="flex place-content-center mt-20">
         <AllPosts posts={posts} />
       </div>
       <div className="flex place-content-center mt-24 mb-24">
@@ -15,6 +15,7 @@ export default function Home({ posts, categories}) {
   )
 }
 
+// Fetch using GraphQL
 export async function getStaticProps() {
   const allPosts = await getPosts()
   const allCategories = await getCategories()
@@ -22,10 +23,12 @@ export async function getStaticProps() {
     props: {
       posts: allPosts.data,
       categories: allCategories.data,
-    }
+    },
+    revalidate: 10,
   }
 }
 
+// Fetch using  URL
 /* export async function getStaticProps() {
   const getPosts = await fetch(`${process.env.API_URL}/api/posts?populate=%2A`)
   const postsRes = await getPosts.json()

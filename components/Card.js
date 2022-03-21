@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import PostImage from './PostImage';
+import Image from 'next/image'
 
 export default function Card(props) {
 
@@ -24,7 +25,14 @@ export default function Card(props) {
           <Link href={`/posts/${post.id}`}><a className='text-blue-500 hover:cursor-pointer hover:underline hover:underline-offset-4 font-semibold'>Learn More &gt;</a></Link>
         </div>
         <div>
-          <PostImage imgURL={post.attributes.profile.data.attributes.url} classes={"rounded-2xl"} />
+          {/* <PostImage imgURL={post.attributes.profile.data.attributes.url} classes={"rounded-2xl"} /> */}
+          <Image 
+            src={post.attributes.profile.data.attributes.url}
+            alt="This is alt text"
+            width={1000}
+            height={500}
+            className="rounded-2xl"
+          />
         </div>
       </div>
     </div>

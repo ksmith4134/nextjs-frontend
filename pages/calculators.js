@@ -1,6 +1,5 @@
 import CalcRangeSlider from "../components/CalcRangeSlider";
 import { useState, useEffect } from 'react'
-import { ReactElement } from 'react'
 import { faCircleQuestion } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ReactTooltip from 'react-tooltip'
@@ -27,7 +26,7 @@ export default function Calculators() {
   }
 
   return (
-    <div className="px-10">
+    <div className="px-20 mt-20">
       <div className="card px-4 py-4 bg-gray-50">
         <div className="flex items-center justify-between gap-2">
           <h2 className="text-3xl font-bold">Breakeven: <span className="font-semibold">{isNaN(fcValue/(uspValue-vcValue)) ? ("") : (isFinite(fcValue/(uspValue-vcValue)) ? (fcValue/(uspValue-vcValue)).toFixed(2) : "" )}</span></h2>
