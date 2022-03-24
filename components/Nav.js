@@ -6,7 +6,7 @@ export default function Nav() {
       <ul className="flex items-baseline shadow-md py-5 px-20 gap-10">
         <li className="flex">
           <Link href="/" >
-            <a className="text-2xl font-bold text-black-600 hover:text-blue-500">Strapi</a>
+            <a className="text-2xl font-bold text-black-600 hover:text-blue-500">Home</a>
           </Link>
         </li>
         <li className="flex">
