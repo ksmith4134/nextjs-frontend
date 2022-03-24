@@ -31,7 +31,7 @@ export default function TeknicCard(props) {
         cards.map((card) => (
           <div key={card.id}>
             {card.attributes.Show === true && (
-              <div className={`flex card p-2 border-2 place-items-center hover:shadow-xl hover:cursor-pointer transition duration-300 ease-in-out hover:scale-110 ${selected === card.id ? "border-teknic-blue" : "border-gray-100"}`} onClick={() => selectTab(card.id)}>
+              <div className={`flex card p-2 border-2 place-items-center hover:shadow-xl hover:cursor-pointer transition duration-300 ease-in-out hover:scale-110 ${selected === parseInt(card.id) ? "border-teknic-blue" : "border-gray-100"}`} onClick={() => selectTab(card.id)}>
                 <div className='flex-none'>
                   {card.attributes.icon.media.data.attributes.url && InsertImage(card.attributes.icon.media.data.attributes.url, card.attributes.icon.width, card.attributes.icon.height, card.attributes.icon.alt, card.attributes.icon.layout, card.attributes.icon.styles)}
                 </div>

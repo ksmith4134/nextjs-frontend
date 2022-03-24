@@ -4,12 +4,12 @@ import { teknicCardData, teknicHeros } from '../data/teknic'
 import { getTeknicFeatures, getTeknicHomepage } from '../lib/api'
 import { useState } from 'react'
 
-export default function Featurette({ heros, cards, localHeros, localcards }) {
+export default function Featurette({ heros, cards }) {
 
-  const [selectedTab, setSelectedTab] = useState("6")
+  const [selectedTab, setSelectedTab] = useState(6)
 
   const tabClick = (id) => {
-    setSelectedTab(id)
+    setSelectedTab(parseInt(id))
   }
 
   return (
@@ -31,9 +31,8 @@ export async function getStaticProps () {
     props: {
       cards: allFeatures.data,
       heros: homepage.data.attributes.Heros,
-
-      localHeros: teknicHeros,
-      localCards: teknicCardData,
+      /* localHeros: teknicHeros,
+      localCards: teknicCardData, */
     },
     revalidate: 10,
   }

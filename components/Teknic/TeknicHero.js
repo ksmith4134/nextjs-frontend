@@ -18,7 +18,7 @@ export default function TeknicHero(props) {
     <>
       {
         heros.map((hero) => (
-          <div key={hero.id} className={`grid grid-cols-2 gap-8 place-items-center ${selected === hero.featureRelation.id ? "" : "hidden"} `}>
+          <div key={hero.id} className={`grid grid-cols-2 gap-8 place-items-center ${selected === parseInt(hero.featureRelation.id) ? "" : "hidden"} `}>
             <div>
               <div className={`font-fancy text-teknic-blue text-6xl ${hero.content.styles}`}>
                 {hero.brandMedia && (
