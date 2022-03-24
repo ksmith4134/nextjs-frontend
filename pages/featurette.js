@@ -12,6 +12,8 @@ export default function Featurette({ heros, cards }) {
     setSelectedTab(id)
   }
 
+  console.log(heros)
+
   return (
     <div className="">
       <div className="px-40 py-16">
