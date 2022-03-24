@@ -6,10 +6,10 @@ import { useState } from 'react'
 
 export default function Featurette({ heros, cards }) {
 
-  const [selectedTab, setSelectedTab] = useState(6)
+  const [selectedTab, setSelectedTab] = useState("6")
 
   const tabClick = (id) => {
-    setSelectedTab(parseInt(id))
+    setSelectedTab(id)
   }
 
   return (
