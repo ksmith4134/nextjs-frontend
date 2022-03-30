@@ -27,18 +27,16 @@ export default function CalcSlider(props) {
   }
 
   return (
-    <div className="w-3/12">
-      <div className="py-2">
-        <label htmlFor="customRange" className="font-semibold text-3xl">{title}</label>
-        <p className="mt-2 text-sm">{description}</p>
-        <div className="flex mt-6 items-center">
-          <span className="pr-2 text-lg">{currency ? formatter.format(min) : min}</span>
-            <RangeSlider min={min} max={max} step={step} value={startPosMid ? ((max-min)/2)+min : min} classes={"flex w-full"} handleClick1={(value) => handleClick2(value)}  />
-          <span className="pl-2 text-lg">{currency ? formatter.format(max) : max}</span>
-        </div>
-        <div>
-          <p className='mt-6 text-xl'>Current value: <span className='font-bold'>{currency ? formatter.format(sliderValue) : sliderValue}</span></p>
-        </div>
+    <div className=''>
+      <label htmlFor="customRange" className="font-bold text-3xl text-sky-400">{title}</label>
+      <p className="mt-3 text-sm">{description}</p>
+      <div className="flex mt-6 items-center">
+        <span className="pr-2 text-lg">{currency ? formatter.format(min) : min}</span>
+          <RangeSlider min={min} max={max} step={step} value={startPosMid ? ((max-min)/2)+min : min} classes={"flex w-full"} handleClick1={(value) => handleClick2(value)}  />
+        <span className="pl-2 text-lg">{currency ? formatter.format(max) : max}</span>
+      </div>
+      <div>
+        <p className='mt-6 text-lg text-center'><span className=' text-[#FC6BA5]'>{currency ? formatter.format(sliderValue) : sliderValue}</span></p>
       </div>
     </div>
   )

@@ -18,23 +18,26 @@ export default function TeknicHero(props) {
     <>
       {
         heros.map((hero) => (
-          <div key={hero.id} className={`grid grid-cols-2 gap-8 place-items-center ${selected == hero.featureRelation.teknic_feature.data.id ? "" : "hidden"} `}>
-            <div>
+          <div key={hero.id} className={`grid sm:grid-cols-1 lg:grid-cols-2 place-items-center mt-16 px-16 ${selected == hero.featureRelation.teknic_feature.data.id ? "" : "hidden"} `}>
+            <div className="order-last px-4">
               <div className={`font-fancy text-teknic-blue text-6xl ${hero.content.styles}`}>
                 {hero.brandMedia && (
                   InsertImage(hero.brandMedia.media.data.attributes.url, hero.brandMedia.width, hero.brandMedia.height, hero.brandMedia.alt, hero.brandMedia.layout, hero.brandMedia.styles)
                 )}
-                {hero.content.title}
+                <span className='px-2'>{hero.content.title}</span>
               </div>
               <h3 className="mt-8 font-semibold text-4xl">{hero.content.subtitle}</h3>
               <p className="mt-6 text-lg">{hero.content.description}</p>
-              {hero.homeURL && (
-                <div className='mt-4' onClick={() => selectHome("6")}>
+              {/* {hero.homeURL && (
+                <div className='mt-4' onClick={() => selectHome("1")}>
                   <span className="text-blue-600 text-lg hover:font-bold hover:cursor-pointer">
                     Home&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight} />
                   </span>
                 </div>
-              )}
+              )} */}
+              <div className='rounded-full bg-amber-400 text-white text-md font-semibold w-40 text-center py-4 mt-8 hover:shadow-lg hover:shadow-amber-400/50 hover:cursor-pointer transition duration-300 ease-in-out hover:scale-110'>
+                Learn more&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight} />
+              </div>
             </div>
             <div>
               {hero.heroMedia && (
@@ -44,37 +47,6 @@ export default function TeknicHero(props) {
           </div>
         ))
       }
-      {/* {
-        heros.map((hero) => (
-          <div key={hero.id} className={`grid grid-cols-2 gap-8 place-items-center ${selected === hero.id ? "" : "hidden"} `}>
-            <div>
-              <div className={`font-fancy text-teknic-blue text-6xl ${hero.titleStyles}`}>
-                {hero.brandMedia && (
-                  InsertImage(hero.brandMedia, hero.brandMediaWidth, hero.brandMediaHeight, "", "", "")
-                )}
-                {hero.title}
-                {hero.series && (
-                  <span className="font-extrabold">-{hero.series}</span>
-                )}
-              </div>
-              <h3 className="mt-8 font-semibold text-4xl">{hero.subtitle}</h3>
-              <p className="mt-6 text-lg">{hero.description}</p>
-              {hero.homeURL && (
-                <div className='mt-4' onClick={() => selectHome(10)}>
-                  <span className="text-blue-600 text-lg hover:font-bold hover:cursor-pointer">
-                    Home&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight} />
-                  </span>
-                </div>
-              )}
-            </div>
-            <div>
-              {hero.heroMedia && (
-                InsertImage(hero.heroMedia, hero.heroMediaWidth, hero.heroMediaHeight, "", "", "rounded-2xl")
-              )}
-            </div>
-          </div>
-        ))
-      } */}
     </>
     
   )
