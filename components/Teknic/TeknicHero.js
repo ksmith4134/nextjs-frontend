@@ -18,9 +18,9 @@ export default function TeknicHero(props) {
     <>
       {
         heros.map((hero) => (
-          <div key={hero.id} className={`grid sm:grid-cols-1 lg:grid-cols-2 place-items-center mt-16 px-16 ${selected == hero.featureRelation.teknic_feature.data.id ? "" : "hidden"} `}>
-            <div className="order-last px-4">
-              <div className={`font-fancy text-teknic-blue text-6xl ${hero.content.styles}`}>
+          <div key={hero.id} className={`grid sm:grid-cols-1 lg:grid-cols-2 place-items-center mt-12 px-16 ${selected == hero.featureRelation.teknic_feature.data.id ? "" : "hidden"} `}>
+            <div className="order-last px-4 mt-4">
+              <div className={`font-fancy text-teknic-blue text-6xl text-center lg:text-left ${hero.content.styles}`}>
                 {hero.brandMedia && (
                   InsertImage(hero.brandMedia.media.data.attributes.url, hero.brandMedia.width, hero.brandMedia.height, hero.brandMedia.alt, hero.brandMedia.layout, hero.brandMedia.styles)
                 )}
@@ -39,7 +39,7 @@ export default function TeknicHero(props) {
                 Learn more&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight} />
               </div>
             </div>
-            <div>
+            <div className='mt-4'>
               {hero.heroMedia && (
                 InsertImage(hero.heroMedia.media.data.attributes.url, hero.heroMedia.width, hero.heroMedia.height, hero.heroMedia.alt, hero.heroMedia.layout, hero.heroMedia.styles)
               )}
