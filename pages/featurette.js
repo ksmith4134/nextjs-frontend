@@ -1,10 +1,11 @@
-import TeknicCard from '../components/Teknic/TeknicCard'
-import TeknicHero from '../components/Teknic/TeknicHero'
-import Image from 'next/image'
-import { faArrowRight, faChevronLeft, faChevronRight, faStar, faHeadset, faMicrochip, faAward } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { getTeknicFeatures, getTeknicHomepage } from '../lib/api'
 import { useState } from 'react'
+import Image from 'next/image'
+import TeknicCard from '../components/Teknic/TeknicCard'
+import TeknicHero from '../components/Teknic/TeknicHero'
+import Reviews from '../components/Teknic/Reviews'
+import PoweredBy from '../components/Teknic/PoweredBy'
+import Innovation from '../components/Teknic/Innovation'
 
 export default function Featurette({ heros, cards }) {
 
@@ -34,41 +35,7 @@ export default function Featurette({ heros, cards }) {
       </div>
 
       {/* POWERED BY TEKNIC */}
-      <div className='bg-gradient-to-b from-white to-gray-100 mt-20 relative top-[-100px]'>
-        <div className='sm:w-11/12 md:w-10/12 mx-auto px-4'>
-          <div className='mx-auto text-center mt-8'>
-            <p className='mb-2 text-gray-400 pt-12'>Powered by</p>
-            <Image src="/teknic-logo-vertical.png" width={150} height={125} /> {/* 1.2, 300x250 */}
-            <h5 className="text-center text-xl mt-4 w-8/12 mx-auto">Teknic has provided high-performance motion control products and expert, factory-direct OEM support since 1985. Our products are proudly designed and built right here in the USA (Greater Rochester, New York).</h5>
-          </div>
-          <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 justify-center pb-36'>
-            <div className='px-4 mt-16'>
-              <FontAwesomeIcon icon={faHeadset} className="text-4xl" />
-              <h3 className='text-xl font-bold mt-4'>Direct Technical Support</h3>
-              <p className='mt-2'>Teknic assigns a non-commissioned, Teknic-employed engineer to each OEM customer to help ensure their success. Some of the OEM consulting services we provide at no charge include: simulations to optimize components for all motion axes, sensitivity analyses, direct technical support throughout the life of your machine, recommendations for best-in-class 3rd-party components, and much more.</p>
-              <div className='rounded-full bg-teknic-blue text-white text-md font-semibold w-40 text-center py-2 mt-6'>
-                Learn more&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight} />
-              </div>
-            </div>
-            <div className='px-4 mt-16'>
-              <FontAwesomeIcon icon={faMicrochip} className="text-4xl" />
-              <h3 className='text-xl font-bold mt-4'>Innovative Performance</h3>
-              <p className='mt-2'>Automation is often one of the areas with the most potential to excel for machine performance and marketability. Better performance and reliability are two of the most tangible advantages and Teknic has numerous proprietary features that directly address these goals. For example, the g-Stop™ anti-resonance motion algorithm reduces machine vibration and ringing while simultaneously allowing faster motion.</p>
-              <div className='rounded-full bg-teknic-blue text-white text-md font-semibold w-40 text-center py-2 mt-6'>
-                Learn more&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight} />
-              </div>
-            </div>
-            <div className='px-4 mt-16'>
-              <FontAwesomeIcon icon={faAward} className="text-4xl" />
-              <h3 className='text-xl font-bold mt-4'>3+ Year Warranty</h3>
-              <p className='mt-2'>Teknic builds its products using single-piece flow manufacturing techniques and comprehensive, automated, quality control. Every servo motor undergoes more than 80 in-process quality checks, and gets a 100% full functional and stress test upon completed assembly. Teknic's focus on quality gives us the confidence to offer a 3+ year warranty on all of our servo motors, controls, drives, and power supplies.</p>
-              <div className='rounded-full bg-teknic-blue text-white text-md font-semibold w-40 text-center py-2 mt-6'>
-                Learn more&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <PoweredBy />
 
       {/* PRODUCTS */}
       <div className="bg-white pb-36">
@@ -86,56 +53,47 @@ export default function Featurette({ heros, cards }) {
       </div>
 
       {/* REVIEWS */}
-      <div className="bg-gradient-to-b from-teknic-blue to-[#074166] pb-24">
-        <div className='sm:w-11/12 md:w-10/12 mx-auto px-4'>
-          <div className='mx-auto text-center pt-24 pb-4'>
-            <div className='rounded-full bg-white text-teknic-blue text-xl font-semibold w-52 text-center mx-auto py-2'>
-              Reviews
-            </div>
-            <h1 className="text-6xl font-bold text-white mt-10">See What They're Saying</h1>
-            <h2 className="text-xl mt-4 text-white">Check out over 100 Google reviews made by OEMs and end-users</h2>
-          </div>
-          <div className='flex'>
-            <div className='mx-auto mt-2'>
-              <FontAwesomeIcon icon={faStar} className="text-xl text-amber-400 px-1" />
-              <FontAwesomeIcon icon={faStar} className="text-xl text-amber-400 px-1" />
-              <FontAwesomeIcon icon={faStar} className="text-xl text-amber-400 px-1" />
-              <FontAwesomeIcon icon={faStar} className="text-xl text-amber-400 px-1" />
-              <FontAwesomeIcon icon={faStar} className="text-xl text-amber-400 px-1" />
-            </div>
-          </div>
-          <div className='mt-12'>
-            <div className='flex justify-end items-center'>
-              <div className='flex justify-end w-[100px] mr-4 ml-auto'>
-                <FontAwesomeIcon icon={faChevronLeft} className="ml-auto py-2 px-4 rounded-full text-4xl text-white hover:bg-cyan-200/40 hover:cursor-pointer hover:scale-125 hover:shadow-sm hover:shadow-gray-400/50" />
-              </div>
-              
-              <div className='flex-1 py-6 px-12 bg-white rounded-2xl shadow-2xl shadow-cyan-200/50 max-w-2xl mx-auto'>
-                <div className='flex justify-between'>
-                  <div>
-                    <h4 className='font-bold'>Jeremy Walton</h4>
-                  </div>
-                  <div className='flex'>
-                    <div className='mx-auto'>
-                      <FontAwesomeIcon icon={faStar} className="text-md text-amber-400" />
-                      <FontAwesomeIcon icon={faStar} className="text-md text-amber-400 px-1" />
-                      <FontAwesomeIcon icon={faStar} className="text-md text-amber-400" />
-                      <FontAwesomeIcon icon={faStar} className="text-md text-amber-400 px-1" />
-                      <FontAwesomeIcon icon={faStar} className="text-md text-amber-400" />
-                    </div>
-                  </div>
-                </div>
-                <p className='mt-2'>Very approachable products that perform well, are cost effective, and are easy to use. The staff is extremely helpful and knowledgeable, and provide excellent customer service. The ordering process is simple, and delivery is fast. Overall a terrific company to work with!</p>
-              </div>
+      <Reviews />
 
-              <div className='flex justify-start w-[100px] ml-4 mr-auto'>
-                <FontAwesomeIcon icon={faChevronRight} className="mr-auto py-2 px-4 rounded-full text-4xl text-white hover:bg-cyan-200/40 hover:cursor-pointer hover:scale-125 hover:shadow-sm hover:shadow-gray-400/50" />
+      {/* INNOVATION */}
+      <Innovation />
+
+      {/* DELETE */}
+      <div className="bg-gray-100 pb-36">
+        <div className='sm:w-11/12 md:w-10/12 mx-auto px-4'>
+          <div className='mx-auto text-center pt-36 pb-4 relative'> 
+            <div className='relative z-10'>
+              <div className='rounded-full bg-teknic-blue text-white text-xl font-semibold w-60 text-center mx-auto py-2'>
+                Control Architectures
               </div>
+              <h1 className="text-6xl font-bold text-gray-800 mt-6">Sophisticated motion. Fractional cost.</h1>
+              <h2 className="text-xl mt-4">Check out some example layouts to see how our customers control their machines</h2>
+            </div>
+            
+            {/* <div className='absolute -top-[1.8%] left-[25%] z-0'>
+              <Image src="/pcb_2_lg.png" width={257} height={520} />
+            </div>
+            <div className='absolute -top-[1.8%] left-[30%] z-0'>
+              <Image src="/pcb_2_lg.png" width={257} height={520} />
+            </div>
+            <div className='absolute -top-[1.8%] left-[35%] z-0'>
+              <Image src="/pcb_2_lg.png" width={257} height={520} />
+            </div>
+            <div className='absolute -top-[1.8%] left-[40%] z-0'>
+              <Image src="/pcb_2_lg.png" width={257} height={520} />
+            </div> */}
+            
+            <div className='card py-4 rounded-2xl mt-24'>
+              <Image src="/clearcore-schematic.svg" width={2000} height={1100} />
             </div>
           </div>
         </div>
       </div>
 
+      <div className="bg-gray-200 pb-36">
+        <div className='sm:w-11/12 md:w-10/12 mx-auto px-4'>
+        </div>
+      </div>
     </div>
     
   )

@@ -25,3 +25,63 @@
   }
 
 }
+
+
+.graphs {
+  animation: animate-graphs 15s linear 0s infinite normal forwards;
+}
+
+@keyframes animate-graphs {
+  0% {width: 50%; left: 0%;}
+  27% {width: 0%; left: 50%;}
+  100% {width: 0%; left: 50%;}
+}
+
+.vial-splash {
+  animation: animate-vial-splash 15s linear 0s infinite normal forwards;
+  z-index:-1;
+}
+
+@keyframes animate-vial-splash {
+  0% { transform: translate(0px, 0px) rotate(0deg); z-index:-1;}
+  25.0% { transform: translate(200px, 0px) rotate(-7deg); z-index:-1; transform-origin: 71% 0.56%;}
+  27.0% { transform: translate(0px, 0px) rotate(7deg); z-index:1; transform-origin: 71% 0.56%;}
+  27.5% { transform: translate(0px, 0px) rotate(-5deg); z-index:1; transform-origin: 71% 0.56%;}
+  28.0% { transform: translate(0px, 0px) rotate(5deg); z-index:1; transform-origin: 71% 0.56%;}
+  28.5% { transform: translate(0px, 0px) rotate(-3deg); z-index:1; transform-origin: 71% 0.56%;}
+  29.0% { transform: translate(0px, 0px) rotate(3deg); z-index:1; transform-origin: 71% 0.56%;}
+  29.5% { transform: translate(0px, 0px) rotate(-2deg); z-index:1; transform-origin: 71% 0.56%;}
+  30.0% { transform: translate(0px, 0px) rotate(2deg); z-index:1; transform-origin: 71% 0.56%;}
+  30.5% { transform: translate(0px, 0px) rotate(-1deg); z-index:1; transform-origin: 71% 0.56%;}
+  31% { transform: translate(0px, 0px) rotate(0deg); z-index:1; }
+  95% { transform: translate(0px, 0px) rotate(0deg); z-index:1; opacity: 0.8;}
+  100% { transform: translate(0px, 0px) rotate(0deg); z-index:1; opacity: 0;}
+}
+
+.vial-clean {
+  animation: animate-vial-clean 15s ease-in-out 0s infinite normal forwards;
+  z-index:-1;
+}
+
+@keyframes animate-vial-clean {
+  0% { transform: translate(0px, 0px) rotate(0deg); z-index:-1;}
+  20.0% { transform: translate(200px, 0px) rotate(-3deg); z-index:-1;}
+  27.0% { transform: translate(0px, 0px) rotate(0deg); z-index:1;}
+  95% { transform: translate(0px, 0px) rotate(0deg); z-index:1; opacity:0.8;}
+  100% { transform: translate(0px, 0px) rotate(0deg); z-index:1; opacity:0;}
+}
+
+.vial-zoom {
+  animation: animate-zoom 15s ease-in-out 0s infinite normal forwards;
+  opacity: 0;
+}
+
+@keyframes animate-zoom {
+  0% {opacity: 0;}
+  35% {opacity: 0;}
+  36% {opacity: 0.2;}
+  40% {opacity: 1.0;}
+  95% {opacity: 0.8;}
+  99% {opacity: 0;}
+  100% {opacity: 0;}
+}
