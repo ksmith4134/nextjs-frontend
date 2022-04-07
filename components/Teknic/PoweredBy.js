@@ -16,7 +16,7 @@ function PoweredBy() {
             <FontAwesomeIcon icon={faHeadset} className="text-4xl" />
             <h3 className='text-xl font-bold mt-4'>Direct Technical Support</h3>
             <p className='mt-2'>Teknic assigns a non-commissioned, Teknic-employed engineer to each OEM customer to help ensure their success. Some of the OEM consulting services we provide at no charge include: simulations to optimize components for all motion axes, sensitivity analyses, direct technical support throughout the life of your machine, recommendations for best-in-class 3rd-party components, and much more.</p>
-            <div className='rounded-full bg-teknic-blue text-white text-md font-semibold w-40 text-center py-2 mt-6'>
+            <div className='rounded-full bg-teknic-blue text-white text-md font-semibold w-40 text-center py-2 mt-6 hover:shadow-lg hover:shadow-teknic-blue/50 hover:cursor-pointer transition duration-300 ease-in-out hover:scale-110'>
               Learn more&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight} />
             </div>
           </div>
@@ -24,7 +24,7 @@ function PoweredBy() {
             <FontAwesomeIcon icon={faMicrochip} className="text-4xl" />
             <h3 className='text-xl font-bold mt-4'>Innovative Performance</h3>
             <p className='mt-2'>Automation is often one of the areas with the most potential to excel for machine performance and marketability. Better performance and reliability are two of the most tangible advantages and Teknic has numerous proprietary features that directly address these goals. For example, the g-Stop™ anti-resonance motion algorithm reduces machine vibration and ringing while simultaneously allowing faster motion.</p>
-            <div className='rounded-full bg-teknic-blue text-white text-md font-semibold w-40 text-center py-2 mt-6'>
+            <div className='rounded-full bg-teknic-blue text-white text-md font-semibold w-40 text-center py-2 mt-6 hover:shadow-lg hover:shadow-teknic-blue/50 hover:cursor-pointer transition duration-300 ease-in-out hover:scale-110'>
               Learn more&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight} />
             </div>
           </div>
@@ -32,7 +32,7 @@ function PoweredBy() {
             <FontAwesomeIcon icon={faAward} className="text-4xl" />
             <h3 className='text-xl font-bold mt-4'>3+ Year Warranty</h3>
             <p className='mt-2'>Teknic builds its products using single-piece flow manufacturing techniques and comprehensive, automated, quality control. Every servo motor undergoes more than 80 in-process quality checks, and gets a 100% full functional and stress test upon completed assembly. Teknic's focus on quality gives us the confidence to offer a 3+ year warranty on all of our servo motors, controls, drives, and power supplies.</p>
-            <div className='rounded-full bg-teknic-blue text-white text-md font-semibold w-40 text-center py-2 mt-6'>
+            <div className='rounded-full bg-teknic-blue text-white text-md font-semibold w-40 text-center py-2 mt-6 hover:shadow-lg hover:shadow-teknic-blue/50 hover:cursor-pointer transition duration-300 ease-in-out hover:scale-110'>
               Learn more&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight} />
             </div>
           </div>

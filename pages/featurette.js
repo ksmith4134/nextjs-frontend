@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import TeknicCard from '../components/Teknic/TeknicCard'
 import TeknicHero from '../components/Teknic/TeknicHero'
-import Reviews from '../components/Teknic/Reviews'
+import ReviewSlider from '../components/Teknic/ReviewSlider'
 import PoweredBy from '../components/Teknic/PoweredBy'
 import Innovation from '../components/Teknic/Innovation'
 
@@ -53,12 +53,12 @@ export default function Featurette({ heros, cards }) {
       </div>
 
       {/* REVIEWS */}
-      <Reviews />
+      <ReviewSlider />
 
       {/* INNOVATION */}
       <Innovation />
 
-      {/* DELETE */}
+      {/* NEXT SECTION */}
       <div className="bg-gray-100 pb-36">
         <div className='sm:w-11/12 md:w-10/12 mx-auto px-4'>
           <div className='mx-auto text-center pt-36 pb-4 relative'> 
@@ -69,20 +69,6 @@ export default function Featurette({ heros, cards }) {
               <h1 className="text-6xl font-bold text-gray-800 mt-6">Sophisticated motion. Fractional cost.</h1>
               <h2 className="text-xl mt-4">Check out some example layouts to see how our customers control their machines</h2>
             </div>
-            
-            {/* <div className='absolute -top-[1.8%] left-[25%] z-0'>
-              <Image src="/pcb_2_lg.png" width={257} height={520} />
-            </div>
-            <div className='absolute -top-[1.8%] left-[30%] z-0'>
-              <Image src="/pcb_2_lg.png" width={257} height={520} />
-            </div>
-            <div className='absolute -top-[1.8%] left-[35%] z-0'>
-              <Image src="/pcb_2_lg.png" width={257} height={520} />
-            </div>
-            <div className='absolute -top-[1.8%] left-[40%] z-0'>
-              <Image src="/pcb_2_lg.png" width={257} height={520} />
-            </div> */}
-            
             <div className='card py-4 rounded-2xl mt-24'>
               <Image src="/clearcore-schematic.svg" width={2000} height={1100} />
             </div>
