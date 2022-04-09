@@ -12,13 +12,13 @@ export default function Nav() {
         </div>
         <ul className="flex"> {/* flex place-items-center gap-10 shadow-md */}
           <li className="ml-10">
-            <Link href="/calculators">
-              <a className="text-xl text-black-600 hover:text-sky-500">Calculators</a>
+            <Link href="/featurette">
+              <a className="text-xl text-black-600 hover:text-sky-500">Tech Feature</a>
             </Link>
           </li>
           <li className="ml-10">
-            <Link href="/featurette">
-              <a className="text-xl text-black-600 hover:text-sky-500">Featurette</a>
+            <Link href="/calculators">
+              <a className="text-xl text-black-600 hover:text-sky-500">Calculators</a>
             </Link>
           </li>
           <li className="ml-10">

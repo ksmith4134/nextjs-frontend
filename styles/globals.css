@@ -87,60 +87,60 @@
 }
 
 .head-disappear {
-  animation: animate-head-dis 15s ease-in-out 0s infinite normal forwards;
+  animation: animate-head-dis 12s ease-in-out 0s infinite normal forwards;
   opacity: 1;
 }
 
 @keyframes animate-head-dis {
   0% {opacity: 1;}
-  40% {opacity: 1;}
-  70% {opacity: 0;}
+  30% {opacity: 1;}
+  60% {opacity: 0;}
   90% {opacity: 0;}
   100% {opacity: 1;}
 }
 
 .head-appear {
-  animation: animate-head-app 15s ease-in-out 0s infinite normal forwards;
+  animation: animate-head-app 12s ease-in-out 0s infinite normal forwards;
   opacity: 0;
 }
 
 @keyframes animate-head-app {
   0% {opacity: 0;}
-  40% {opacity: 0;}
-  70% {opacity: 1;}
+  30% {opacity: 0;}
+  60% {opacity: 1;}
   90% {opacity: 1;}
   100% {opacity: 0;}
 }
 
 .move-text-right {
-  animation: animate-text-left 15s ease-in-out 0s infinite normal forwards;
+  animation: animate-text-left 12s ease-in-out 0s infinite normal forwards;
   left: 0%;
 }
 
 @keyframes animate-text-left {
   0% {left: 0.5%;}
-  40% {left: 0.5%;}
-  70% {left: 22.2%;}
+  30% {left: 0.5%;}
+  60% {left: 22.2%;}
   90% {left: 22.2%;}
   100% {left: 0.5%;}
 }
 
 .h1-gradient {
-  animation: animate-h1-gradient 15s ease-in-out 0s infinite normal forwards;
+  animation: animate-h1-gradient 12s ease-in-out 0s infinite normal forwards;
 }
 
 @keyframes animate-h1-gradient {
   0% {
-    background-clip: none;
-    color: rgb(0, 0, 0);
-    background-image: none;
+    background-clip: text;
+    color: rgb(0, 0, 0, 1);
+    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(59, 0, 197));
+  }
+  50% {
+    background-clip: text;
+    color: rgb(0, 0, 0, 1);
+    background-image:  linear-gradient(to right, rgb(0, 231, 231), rgb(59, 0, 197));
   }
   60% {
-    background-clip: none;
-    color: rgb(0, 0, 0);
-    background-image: none;
-  }
-  70% {
     background-clip: text;
     color: rgba(0, 0, 0, 0);
     background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(59, 0, 197));
@@ -151,9 +151,71 @@
     background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(59, 0, 197));
   }
   100% {
-    background-clip: none;
-    color: rgb(0, 0, 0);
-    background-image: none;
+    background-clip: text;
+    color: rgb(0, 0, 0, 1);
+    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(59, 0, 197));
   }
 }
+
+.gradient-shift {
+  animation: animate-gradient 12s ease-in-out 0s infinite normal forwards;
+  left: 1%;
+  background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(59, 0, 197));
+  color: white;
+}
+
+@keyframes animate-gradient {
+  0% {
+    left: 1%;
+    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(59, 0, 197));
+    color: white;
+  }
+  30% {
+    left: 1%;
+    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(59, 0, 197));
+    color: white;
+  }
+  60% {
+    left: 22%;
+    background-image: linear-gradient(to right, rgb(95, 95, 95), rgb(0, 0, 0));
+    color: white;
+  }
+  90% {
+    left: 22%;
+    background-image: linear-gradient(to right, rgb(95, 95, 95), rgb(0, 0, 0));
+    color: white;
+  }
+  100% {
+    left: 1%;
+    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(59, 0, 197));
+    color: white;
+  }
+}
+
+.hide-text {
+  animation: animate-hide-text 12s ease-in-out 0s infinite normal forwards;
+  opacity: 1;
+}
+
+@keyframes animate-hide-text {
+  0% {opacity: 1;}
+  30% {opacity: 1;}
+  60% {opacity: 0;}
+  90% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.show-text {
+  animation: animate-show-text 12s ease-in-out 0s infinite normal forwards;
+  opacity: 0;
+}
+
+@keyframes animate-show-text {
+  0% {opacity: 0;}
+  30% {opacity: 0;}
+  60% {opacity: 1;}
+  90% {opacity: 1;}
+  100% {opacity: 0;}
+}
+  
   

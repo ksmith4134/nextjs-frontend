@@ -4,23 +4,27 @@ export default function Home({ posts, categories}) {
   return (
     <div className="">
       <div className="bg-gray-100">
-        <div className='sm:w-11/12 md:w-10/12 mx-auto px-4 pb-2'>
-          <div className='grid grid-cols-12 place-items-center pt-24'>
+        <div className='sm:w-11/12 md:w-10/12 mx-auto px-4 pt-6'>
+          <div className='grid grid-cols-12 place-items-center pt-12'>
             <div className="col-span-6 order-2">
-              <div className='mx-auto text-center relative head-disappear z-10'>
-                <Image src="/head-neck.png" width={245} height={300} /> {/* 0.8151 */}
+              <div className='mx-auto text-center relative z-10 head-disappear'>
+                <Image src="/head-neck.png" width={230} height={282} /> {/* 0.8151 */}
               </div>
-              <div className='absolute top-[14%] left-[62.5%] head-appear z-10'>
-                <Image src="/me-head-only.png" width={245} height={405} /> {/* 0.6047 */}
+              <div className='absolute top-[17%] left-[63.7%] z-10 head-appear'>
+                <Image src="/me-head-only_2.png" width={200} height={304} /> {/* 0.6571 */}
               </div>
-              <div className="bg-white rounded-full w-[400px] h-[400px] shadow-2xl z-0 absolute top-[16%] right-[17%]"></div>
+              <div className="bg-white rounded-full w-[330px] h-[330px] shadow-2xl z-0 absolute top-[15%] right-[19%]"></div>
             </div>
-            <div className="col-span-6 order-1 relative -mt-12">
-              <h1 className='text-6xl font-bold'>
+            <div className="col-span-6 order-1 relative -mt-44">
+              <h1 className='text-6xl font-bold mt-6'>
                 <span className='head-disappear'>Not </span>
-                <span className='h1-gradient'>That Kevin Smith</span> {/*  bg-clip-text bg-gradient-to-r from-teal-500 via bg-sky-500 to-indigo-500 */}
+                <span className='h1-gradient'>That Kevin Smith</span>
               </h1>
-              <h2 className="text-xl mt-2 absolute move-text-right">Kevin Smith's web design and development portfolio</h2>
+              <h2 className="text-2xl mt-2 absolute move-text-right">Web design and development portfolio</h2>
+              <div className='gradient-shift absolute top-[180%] text-md rounded-full py-6 px-4 w-[250px] text-center'>
+              </div>
+              <div className='hide-text text-white absolute top-[193%] left-[6%]'>Writer. Actor. Director. Etc.</div>
+              <div className='show-text text-white absolute top-[193%] left-[26.7%]'>Some guy from Upstate NY</div>
             </div>
           </div>
           
