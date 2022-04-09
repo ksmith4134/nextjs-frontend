@@ -69,7 +69,7 @@ export default function ReviewSlider(props) {
 
   return (
     <div className="bg-gradient-to-b from-gray-100 to-gray-100 py-24"> {/* 005f9e */}
-      <div className='sm:w-11/12 md:w-10/12 mx-auto px-4'>
+      <div className='sm:w-11/12 md:w-10/12 mx-auto px-0 lg:px-4'>
         <div className='mx-auto text-center pb-4'>
           <div className='rounded-full bg-teknic-blue text-white text-xl font-semibold w-52 text-center mx-auto py-2'>
             Reviews
@@ -101,11 +101,11 @@ export default function ReviewSlider(props) {
                     </div>
                     <div className='flex'>
                       <div className='mx-auto'>
-                        <FontAwesomeIcon icon={faStar} className="text-md text-amber-400" />
-                        <FontAwesomeIcon icon={faStar} className="text-md text-amber-400 px-1" />
-                        <FontAwesomeIcon icon={faStar} className="text-md text-amber-400" />
-                        <FontAwesomeIcon icon={faStar} className="text-md text-amber-400 px-1" />
-                        <FontAwesomeIcon icon={faStar} className="text-md text-amber-400" />
+                        <FontAwesomeIcon icon={faStar} className="text-sm md:text-md text-amber-400" />
+                        <FontAwesomeIcon icon={faStar} className="text-sm md:text-md text-amber-400 md:px-1" />
+                        <FontAwesomeIcon icon={faStar} className="text-sm md:text-md text-amber-400" />
+                        <FontAwesomeIcon icon={faStar} className="text-sm md:text-md text-amber-400 md:px-1" />
+                        <FontAwesomeIcon icon={faStar} className="text-sm md:text-md text-amber-400" />
                       </div>
                     </div>
                   </div>

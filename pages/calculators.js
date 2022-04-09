@@ -1,5 +1,5 @@
-import CalcRangeSlider from "../components/CalcRangeSlider";
-import { useState, useEffect } from 'react'
+import CalcRangeSlider from "../components/Calculator/CalcRangeSlider";
+import { useState } from 'react'
 import { faCircleQuestion } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ReactTooltip from 'react-tooltip'

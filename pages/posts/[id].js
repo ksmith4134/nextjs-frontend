@@ -1,17 +1,30 @@
 import { remark } from 'remark'
 import html from 'remark-html'
 import { getPosts, getPost } from '../../lib/api'
+import Image from 'next/image'
 
 export default function PostPage({ post, contentHtml }) {
+
+  var date = new Date(post.attributes.createdAt)
+
   return (
-    <article>
-      <header>
-        <h1 className="mb-4"><span className="text-xl font-bold mb-2">Title: </span>{post.attributes.title}</h1>
-        <h1 className="mb-4"><span className="text-xl font-bold mb-2">Description: </span>{post.attributes.description}</h1>
-      </header>
-      <h3 className="text-xl font-bold mb-2">Content: </h3>
-      <section dangerouslySetInnerHTML={{__html: contentHtml}}></section>
-    </article>
+    <div className='bg-white mt-6 pb-12'>
+      <div className="sm:w-11/12 md:w-10/12 mx-auto px-3">
+        <div className="max-w-3xl mx-auto pt-6">
+          <div className='text-center'>
+            <Image src={post.attributes.profile.data.attributes.url} alt="This is alt text" width={500} height={250} className="rounded-2xl" />
+          </div>
+          <article>
+            <header className='text-center'>
+              <h1 className="text-4xl font-bold mt-12">{post.attributes.title}</h1>
+              <h1 className="text-xl text-center mt-6">{post.attributes.description}</h1>
+              <div className='mt-6'>{post.attributes.author}, {date.toLocaleDateString()}</div>
+            </header>
+            <section className='mt-12' dangerouslySetInnerHTML={{__html: contentHtml}}></section>
+          </article>
+        </div>
+      </div>
+    </div>
   )
 }
 
