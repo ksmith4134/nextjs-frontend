@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Nav() {
   return (
-    <nav className='flex justify-center h-20 w-screen text-gray-900 shadow-lg'>
+    <nav className='flex justify-center h-20 w-screen text-gray-900 shadow-md relative z-0'>
       {/* bg-[#1D1D3A] */}
       <div className='flex justify-between items-center h-full sm:w-11/12 md:w-10/12 mx-auto'>
         <div>
