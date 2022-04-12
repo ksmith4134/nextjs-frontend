@@ -1,44 +1,61 @@
 import Image from 'next/image'
+import { useState } from 'react'
+import Tech from './Tech'
 
-export default function Stack() {
+export default function Stack({ jamStack }) {
+
+  const colors = {
+    'text-tailwindBlue': '#07b6d5',
+    'text-javascriptYellow': '#f7df1e',
+    'text-reactBlue': '#61dafb',
+    'text-nextBlack': '#000000',
+    'text-nodejsGreen': '#689f63',
+    'text-graphqlPink': '#e535ab',
+    'text-strapiPurple': '#9179ff',
+    'border-tailwindBlue': '#07b6d5',
+    'border-javascriptYellow': '#f7df1e',
+    'border-reactBlue': '#61dafb',
+    'border-nextBlack': '#000000',
+    'border-nodejsGreen': '#689f63',
+    'border-graphqlPink': '#e535ab',
+    'border-strapiPurple': '#9179ff'
+  }
+
+  const [hoveredJam, setHoveredJam] = useState(null);
+  const [selectedJam, setSelectedJam] = useState(jamStack[3].id);
+
+  const setHover = (id) => {
+    setHoveredJam(id)
+  }
+
+  const setClick = (id) => {
+    setSelectedJam(id)
+  }
+
   return (
-    <div className="bg-white mb-10">
+    <div className="bg-white pb-24">
       <div className='sm:w-11/12 md:w-10/12 mx-auto'>
-        {/* <div className="text-center">
-          <h2 className="text-4xl font-bold">Jamstack</h2>
+        <div className="text-center">
+          <h2 className="text-5xl font-bold pt-24">My Jamstack</h2>
           <h3 className="text-xl mt-4">Click below to learn how each technology was used in developing this site</h3>
-        </div> */}
-        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 justify-items-center items-end mt-4'>
-          <div className="mt-6 hover:cursor-pointer transition duration-500 ease-in-out hover:scale-125">
-            <Image src="/tailwind.svg" width={80} height={70} />
-            <p className="text-center text-[#07B6D5] font-bold">Tailwind</p>
-          </div>
-          <div className="mt-6 hover:cursor-pointer transition duration-500 ease-in-out hover:scale-125">
-            <Image src="/javascript.svg" width={80} height={70} />
-            <p className="text-center text-[#F7DF1E] font-bold">JavaScript</p>
-          </div>
-          <div className="mt-6 hover:cursor-pointer transition duration-500 ease-in-out hover:scale-125">
-            <Image src="/react.svg" width={85} height={70} />
-            <p className="text-center text-[#61DAFB] font-bold">React</p>
-          </div>
-          <div className="mt-6 hover:cursor-pointer transition duration-500 ease-in-out hover:scale-125">
-            <Image src="/nextjs.svg" width={200} height={80} />
-            <p className="text-center text-[#000000] font-bold">React Framework</p>
-          </div>
-          <div className="mt-6 hover:cursor-pointer transition duration-500 ease-in-out hover:scale-125">
-            <Image src="/nodejs.svg" width={200} height={80} />
-            <p className="text-center text-[#689F63] font-bold">NodeJS</p>
-          </div>
-          <div className="mt-6 hover:cursor-pointer transition duration-500 ease-in-out hover:scale-125">
-            <Image src="/graphql.svg" width={70} height={70} />
-            <p className="text-center text-[#E535AB] font-bold">GraphQL</p>
-          </div>
-          <div className="mt-6 hover:cursor-pointer transition duration-500 ease-in-out hover:scale-125">
-            <Image src="/strapi.svg" width={150} height={70} />
-            <p className="text-center text-[#9179FF] font-bold">Headless CMS</p>
-          </div>
         </div>
+        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 place-content-center'>
+          {
+            jamStack.map((jam) => (
+              <div key={jam.id} className={`h-full mt-20 hover:scale-110 hover:cursor-pointer transition duration-500 ease-in-out w-full text-center ${jam.textColor}`} onMouseOver={() => setHover(jam.id)} onMouseOut={() => setHover(null)}>
+                <div onClick={() => setClick(jam.id)}>
+                  <Image src={jam.img} width={jam.width} height={jam.height} />
+                  <p className={`text-center font-bold mt-1 mb-4`}>{jam.tech}</p>
+                  <div className={`w-3/4 mx-auto ${selectedJam === jam.id ? "border-b-4 " + jam.borderColor : ""} ${hoveredJam === jam.id ? "border-b-4 " + jam.borderColor : ""}`}></div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+        <Tech selected={selectedJam} jams={jamStack} />
       </div>
     </div>
   )
 }
+
+

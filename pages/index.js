@@ -1,22 +1,23 @@
 import Deployment from '../components/Home/Deployment'
 import Header from '../components/Home/Header'
 import Stack from '../components/Home/Stack'
+import { stack } from '../data/home'
 
-export default function Home() {
+export default function Home({ jamStack }) {
+
   return (
     <div>
       <Header />
-      <Stack />
+      <Stack jamStack={jamStack} />
       <Deployment />
-      
-      <div className="bg-white">
-        <div className='sm:w-11/12 md:w-10/12 mx-auto'>
-          <div className=''>
-            
-          </div>
-        </div>
-      </div>
-
     </div>
   )
+}
+
+export async function getStaticProps () {
+  return {
+    props: {
+      jamStack: stack
+    }
+  }
 }
