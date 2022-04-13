@@ -130,46 +130,46 @@
   0% {
     background-clip: text;
     color: rgb(0, 0, 0, 1);
-    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(59, 0, 197));
+    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
   }
   50% {
     background-clip: text;
     color: rgb(0, 0, 0, 1);
-    background-image:  linear-gradient(to right, rgb(0, 231, 231), rgb(59, 0, 197));
+    background-image:  linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
   }
   60% {
     background-clip: text;
     color: rgba(0, 0, 0, 0);
-    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(59, 0, 197));
+    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
   }
   90% {
     background-clip: text;
     color: rgba(0, 0, 0, 0);
-    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(59, 0, 197));
+    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
   }
   100% {
     background-clip: text;
     color: rgb(0, 0, 0, 1);
-    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(59, 0, 197));
+    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
   }
 }
 
 .gradient-shift {
   animation: animate-gradient 12s ease-in-out 0s infinite normal forwards;
   left: 1%;
-  background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(59, 0, 197));
+  background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
   color: white;
 }
 
 @keyframes animate-gradient {
   0% {
     left: 1%;
-    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(59, 0, 197));
+    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
     color: white;
   }
   30% {
     left: 1%;
-    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(59, 0, 197));
+    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
     color: white;
   }
   60% {
@@ -184,7 +184,7 @@
   }
   100% {
     left: 1%;
-    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(59, 0, 197));
+    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
     color: white;
   }
 }

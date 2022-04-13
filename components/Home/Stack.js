@@ -44,7 +44,7 @@ export default function Stack({ jamStack }) {
             jamStack.map((jam) => (
               <div key={jam.id} className={`h-full mt-20 hover:scale-110 hover:cursor-pointer transition duration-500 ease-in-out w-full text-center ${jam.textColor}`} onMouseOver={() => setHover(jam.id)} onMouseOut={() => setHover(null)}>
                 <div onClick={() => setClick(jam.id)}>
-                  <Image src={jam.img} width={jam.width} height={jam.height} />
+                  <Image src={jam.img} width={jam.width} height={jam.height} className="" />
                   <p className={`text-center font-bold mt-1 mb-4`}>{jam.tech}</p>
                   <div className={`w-3/4 mx-auto ${selectedJam === jam.id ? "border-b-4 " + jam.borderColor : ""} ${hoveredJam === jam.id ? "border-b-4 " + jam.borderColor : ""}`}></div>
                 </div>

@@ -48,10 +48,10 @@ export default function Tech({ selected, jams }) {
           {
             jams.map((jam) => (
               <div key={jam.id} className={`w-[50%] flex-shrink-0 mx-6 flex-grow-0 transition-transform duration-1000`} style={sliderStyle}>
-                <div className={`card border-2 border-gray-50 h-full pt-8 pb-10 px-10 ${selected === jam.id ? "scale-[110%]" : ""}`}>{/*  */}
-                <Image src={jam.img} width={jam.width} height={jam.height} />
-                  <h4 className="text-lg text-gray-400 mt-2"><span className={`${jam.textColor}`}>{jam.title}</span> is a {jam.subtitle}</h4>
-                  <p className="mt-6 mb-10">{jam.body}</p>
+                <div className={`rounded-2xl bg-gray-800 text-white h-full pt-8 pb-10 px-10 ${selected === jam.id ? "scale-[110%] shadow-xl" : ""}`}>
+                <Image src={`${jam.altImg ? jam.altImg : jam.img}`} width={jam.width} height={jam.height} />
+                  <h4 className="text-lg text-gray-400 mt-2 leading-6"><span className={`font-bold ${jam.altTextColor ? "text-white" : jam.textColor}`}>{jam.title}</span> is a {jam.subtitle}</h4>
+                  <p className="mt-4 mb-10 text-sm leading-5">{jam.body}</p>
                   <div className="">
                     <Link href={`${jam.url}`}><a target="_blank" className={`rounded-full w-52 text-white ${jam.buttonColor} px-6 py-3 shadow-md hover:shadow-lg ${jam.shadowColor}`}>Learn More</a></Link>
                   </div>
