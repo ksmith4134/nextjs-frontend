@@ -107,10 +107,10 @@
 }
 
 .h1-disappear {
-  animation: animate-head-dis 12s ease-in-out 0s infinite normal forwards;
+  animation: animate-h1-dis 12s ease-in-out 0s infinite normal forwards;
   opacity: 1;
 }
-@keyframes animate-head-dis {
+@keyframes animate-h1-dis {
   0% {opacity: 1;}
   30% {opacity: 1;}
   60% {opacity: 0.2;}
