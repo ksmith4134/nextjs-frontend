@@ -23,7 +23,16 @@
 
 }
 
+/* HOMEPAGE DEPLOYMENT SECTION: HOVER ICON CHANGE */
+.folder:hover .folder-closed,
+.folder .folder-open {
+    display: none;
+}
+.folder:hover .folder-open {
+    display: inline;
+}
 
+/* GSTOP VIAL ANIMATION */
 .graphs {
   animation: animate-graphs 15s linear 0s infinite normal forwards;
 }
@@ -83,11 +92,12 @@
   100% {opacity: 0;}
 }
 
+
+/* HOMEPAGE HEADER */
 .head-disappear {
   animation: animate-head-dis 12s ease-in-out 0s infinite normal forwards;
   opacity: 1;
 }
-
 @keyframes animate-head-dis {
   0% {opacity: 1;}
   30% {opacity: 1;}
@@ -96,11 +106,22 @@
   100% {opacity: 1;}
 }
 
+.h1-disappear {
+  animation: animate-head-dis 12s ease-in-out 0s infinite normal forwards;
+  opacity: 1;
+}
+@keyframes animate-head-dis {
+  0% {opacity: 1;}
+  30% {opacity: 1;}
+  60% {opacity: 0.2;}
+  90% {opacity: 0.1;}
+  100% {opacity: 1;}
+}
+
 .head-appear {
   animation: animate-head-app 12s ease-in-out 0s infinite normal forwards;
   opacity: 0;
 }
-
 @keyframes animate-head-app {
   0% {opacity: 0;}
   30% {opacity: 0;}
@@ -111,81 +132,70 @@
 
 .move-text-right {
   animation: animate-text-left 12s ease-in-out 0s infinite normal forwards;
-  left: 0%;
+  padding-left: 0.8%;
 }
-
 @keyframes animate-text-left {
-  0% {left: 0.5%;}
-  30% {left: 0.5%;}
-  60% {left: 22.2%;}
-  90% {left: 22.2%;}
-  100% {left: 0.5%;}
+  0% {padding-left: 0.8%;}
+  30% {padding-left: 0.8%;}
+  60% {padding-left: 21%;}
+  90% {padding-left: 21%;}
+  100% {padding-left: 0.8%;}
 }
 
 .h1-gradient {
   animation: animate-h1-gradient 12s ease-in-out 0s infinite normal forwards;
+  background-clip: text;
+  background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
 }
-
 @keyframes animate-h1-gradient {
   0% {
-    background-clip: text;
     color: rgb(0, 0, 0, 1);
-    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
   }
   50% {
-    background-clip: text;
     color: rgb(0, 0, 0, 1);
-    background-image:  linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
   }
   60% {
-    background-clip: text;
     color: rgba(0, 0, 0, 0);
-    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
   }
   90% {
-    background-clip: text;
     color: rgba(0, 0, 0, 0);
-    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
   }
   100% {
-    background-clip: text;
     color: rgb(0, 0, 0, 1);
-    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
   }
 }
 
 .gradient-shift {
   animation: animate-gradient 12s ease-in-out 0s infinite normal forwards;
-  left: 1%;
+  margin-left: 0.8%;
+  width: 300px;
   background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
-  color: white;
 }
-
 @keyframes animate-gradient {
   0% {
-    left: 1%;
+    margin-left: 0.8%;
+    width: 300px;
     background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
-    color: white;
   }
   30% {
-    left: 1%;
+    margin-left: 0.8%;
+    width: 300px;
     background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
-    color: white;
   }
   60% {
-    left: 22%;
+    margin-left: 0.8%;
+    width: 250px;
     background-image: linear-gradient(to right, rgb(95, 95, 95), rgb(0, 0, 0));
-    color: white;
   }
   90% {
-    left: 22%;
+    margin-left:0.8%;
+    width: 250px;
     background-image: linear-gradient(to right, rgb(95, 95, 95), rgb(0, 0, 0));
-    color: white;
   }
   100% {
-    left: 1%;
+    margin-left: 0.8%;
+    width: 300px;
     background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
-    color: white;
   }
 }
 
