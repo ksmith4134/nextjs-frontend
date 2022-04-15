@@ -113,8 +113,8 @@
 @keyframes animate-h1-dis {
   0% {opacity: 1;}
   30% {opacity: 1;}
-  60% {opacity: 0.2;}
-  90% {opacity: 0.1;}
+  60% {opacity: 0;}
+  90% {opacity: 0;}
   100% {opacity: 1;}
 }
 
@@ -142,16 +142,55 @@
   100% {padding-left: 0.8%;}
 }
 
+.move-text-up {
+  animation: animate-text-up 12s ease-in-out 0s infinite normal forwards;
+  margin-top: 0%;
+}
+@keyframes animate-text-up {
+  0% {margin-top: 0%;}
+  30% {margin-top: 0%;}
+  60% {margin-top: -11%;}
+  90% {margin-top: -11%;}
+  100% {margin-top: 0%;}
+}
+
+.h1-left {
+  animation: animate-h1-left 12s ease-in-out 0s infinite normal forwards;
+  left: 0%;
+}
+@keyframes animate-h1-left {
+  0% {
+    color: rgb(0, 0, 0, 1);
+    left: 0%;
+  }
+  40% {
+    color: rgb(0, 0, 0, 1);
+    left: 0%;
+  }
+  60% {
+    color: rgba(0, 0, 0, 0);
+    left: -17%;
+  }
+  90% {
+    color: rgba(0, 0, 0, 0);
+    left: -17%;
+  }
+  100% {
+    color: rgb(0, 0, 0, 1);
+    left: 0%;
+  }
+}
+
 .h1-gradient {
   animation: animate-h1-gradient 12s ease-in-out 0s infinite normal forwards;
   background-clip: text;
-  background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
+  background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(136, 0, 255));
 }
 @keyframes animate-h1-gradient {
   0% {
     color: rgb(0, 0, 0, 1);
   }
-  50% {
+  40% {
     color: rgb(0, 0, 0, 1);
   }
   60% {
@@ -167,35 +206,28 @@
 
 .gradient-shift {
   animation: animate-gradient 12s ease-in-out 0s infinite normal forwards;
-  margin-left: 0.8%;
-  width: 300px;
-  background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
+  background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(136, 0, 255)); /* 89, 0, 255 */
 }
 @keyframes animate-gradient {
   0% {
-    margin-left: 0.8%;
-    width: 300px;
-    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
+    width: 350px;
+    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(136, 0, 255));
   }
   30% {
-    margin-left: 0.8%;
-    width: 300px;
-    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
+    width: 350px;
+    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(136, 0, 255));
   }
   60% {
-    margin-left: 0.8%;
-    width: 250px;
+    width: 300px;
     background-image: linear-gradient(to right, rgb(95, 95, 95), rgb(0, 0, 0));
   }
   90% {
-    margin-left:0.8%;
-    width: 250px;
+    width: 300px;
     background-image: linear-gradient(to right, rgb(95, 95, 95), rgb(0, 0, 0));
   }
   100% {
-    margin-left: 0.8%;
-    width: 300px;
-    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(89, 0, 255));
+    width: 350px;
+    background-image: linear-gradient(to right, rgb(0, 231, 231), rgb(136, 0, 255));
   }
 }
 

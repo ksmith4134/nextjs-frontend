@@ -6,7 +6,7 @@ export default function Header2() {
       <div className='sm:w-11/12 md:w-9/12 mx-auto px-4'>
         <div className='grid grid-cols-12 justify-items-start items-center'>
 
-          <div className="order-1 col-span-7">
+          <div className="order-1 col-span-7 border-2 w-full">
             <div className="relative">
               <h1 className='text-6xl font-bold'>
                 <span className='h1-disappear text-black'>Not </span>

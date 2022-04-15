@@ -1,6 +1,5 @@
 import Deployment from '../components/Home/Deployment'
 import Header from '../components/Home/Header'
-import Header2 from '../components/Home/Header2'
 import Stack from '../components/Home/Stack'
 import { stack } from '../data/home'
 
@@ -8,7 +7,6 @@ export default function Home({ jamStack }) {
 
   return (
     <div>
-      {/* <Header2 /> */}
       <Header />
       <Stack jamStack={jamStack} />
       <Deployment />

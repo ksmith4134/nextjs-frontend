@@ -2,9 +2,9 @@ import Link from 'next/link'
 
 export default function Nav() {
   return (
-    <nav className='flex justify-center h-20 w-screen text-gray-900 shadow-md relative z-0'>
+    <nav className='flex place-items-center min-h-[70px] w-screen text-gray-900 shadow-md relative z-0'>
       {/* bg-[#1D1D3A] */}
-      <div className='flex justify-between items-center h-full sm:w-11/12 md:w-10/12 mx-auto'>
+      <div className='flex justify-between flex-wrap items-center h-full sm:w-11/12 md:w-10/12 mx-auto'>
         <div>
           <Link href="/" >
             <a className="text-3xl font-bold text-black hover:text-sky-500">Home</a>
