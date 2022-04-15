@@ -26,20 +26,20 @@ export default function Calculators() {
   }
 
   return (
-      <div className="bg-gray-900 h-full">
+      <div className="bg-gradient-to-b from-gray-800 to-gray-900 h-full">
         <div className="w-10/12 mx-auto pt-28">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-bold text-6xl text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via bg-purple-500 to-pink-500">Breakeven Calculator</h2>
             <p className="mt-6 text-center text-xl text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt porro ipsum iste earum nesciunt tempore praesentium temporibus dignissimos eum error hic voluptas consequuntur incidunt corporis.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-4 text-white mt-16">
-            <div className="bg-[#0A0F19] rounded-2xl p-6 border-2 border-sky-500/50 shadow-md shadow-sky-500/50">
+            <div className="bg-gray-900 rounded-2xl p-6 border-2 border-sky-500/50 shadow-md shadow-sky-500/50">
               <CalcRangeSlider title={"Unit sales price"} description={"This is some description text. Lorem ipsum magna cillum pariatur consequat officia exercitation ullamco dolore."} min={0} max={100} step={1} startPosMid={false} currency={true} onChange={unitSalesPrice} />
             </div>
-            <div className="bg-[#0A0F19] rounded-2xl p-6 border-2 border-sky-500/50 shadow-md shadow-sky-500/50">
+            <div className="bg-gray-900 rounded-2xl p-6 border-2 border-sky-500/50 shadow-md shadow-sky-500/50">
               <CalcRangeSlider title={"Fixed costs"} description={"This is some description text. Lorem ipsum magna cillum pariatur consequat officia exercitation ullamco dolore."} min={0} max={100} step={1} startPosMid={false} currency={true} onChange={fixedCosts} />
             </div>
-            <div className="bg-[#0A0F19] rounded-2xl p-6 border-2 border-sky-500/50 shadow-md shadow-sky-500/50">
+            <div className="bg-gray-900 rounded-2xl p-6 border-2 border-sky-500/50 shadow-md shadow-sky-500/50">
               <CalcRangeSlider title={"Variable costs"} description={"This is some description text. Lorem ipsum magna cillum pariatur consequat officia exercitation ullamco dolore."} min={0} max={100} step={1} startPosMid={false} currency={true} onChange={variableCosts} />
             </div>
           </div>

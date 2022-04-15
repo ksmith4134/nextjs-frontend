@@ -46,7 +46,7 @@ function Innovation() {
           </div>
         </div>
 
-        <div className="grid grid-cols-12 lg:grid-cols-12 place-items-center max-w-5xl mx-auto mt-24">
+        <div className="grid grid-cols-12 lg:grid-cols-12 place-items-center max-w-5xl mx-auto mt-16">
           <div className="order-2 lg:order-1 col-span-12 lg:col-span-5 lg:pr-12 mt-12 lg:mt-0">
             <p className='text-gray-400 text-md'>Software protecting hardware</p>
             <h3 className="font-bold text-3xl text-black mt-2">SmartSaturation&trade;</h3>
@@ -57,7 +57,7 @@ function Innovation() {
             </div>
           </div>
           <div className="order-1 lg:order-2 col-span-12 lg:col-span-7 mt-20 lg:mt-0">
-            <Image src="/4-axis.jpg" width={900} height={506} className="rounded-2xl" />
+            <Image src="/clearpath_family_cropped.jpg" width={962} height={542} className="rounded-2xl" />
           </div>
         </div>
 

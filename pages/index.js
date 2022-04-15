@@ -7,7 +7,7 @@ export default function Home({ jamStack }) {
 
   return (
     <div>
-      <Header />
+      <Header />      
       <Stack jamStack={jamStack} />
       <Deployment />
     </div>

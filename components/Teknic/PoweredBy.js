@@ -9,13 +9,13 @@ function PoweredBy() {
         <div className='mx-auto text-center mt-8'>
           <p className='mb-2 text-gray-400 pt-12'>Powered by</p>
           <Image src="/teknic-logo-vertical.png" width={150} height={125} /> {/* 1.2, 300x250 */}
-          <h5 className="text-center text-xl mt-4 w-8/12 mx-auto">Teknic has provided high-performance motion control products and expert, factory-direct OEM support since 1985. Our products are proudly designed and built right here in the USA (Greater Rochester, New York).</h5>
+          <h5 className="text-center text-xl mt-4 w-full md:w-8/12 mx-auto">Teknic has provided high-performance motion control products and expert, factory-direct OEM support since 1985. Our products are proudly designed and built right here in the USA (Greater Rochester, New York).</h5>
         </div>
-        <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 justify-center pb-36'>
+        <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 place-items-center pb-36 mx-auto'>
           <div className='px-4 mt-16'>
             <FontAwesomeIcon icon={faHeadset} className="text-4xl" />
             <h3 className='text-xl font-bold mt-4'>Direct Technical Support</h3>
-            <p className='mt-2'>Teknic assigns a non-commissioned, Teknic-employed engineer to each OEM customer to help ensure their success. Some of the OEM consulting services we provide at no charge include: simulations to optimize components for all motion axes, sensitivity analyses, direct technical support throughout the life of your machine, recommendations for best-in-class 3rd-party components, and much more.</p>
+            <p className='mt-2'>Teknic assigns a non-commissioned, factory-direct, application engineer to each OEM customer to help ensure their success. Some of the OEM consulting services we provide at no charge include: simulations to optimize components for all motion axes, sensitivity analyses, direct technical support throughout the life of your machine, recommendations for best-in-class 3rd-party components, and much more.</p>
             <div className='rounded-full bg-teknic-blue text-white text-md font-semibold w-40 text-center py-2 mt-6 hover:shadow-lg hover:shadow-teknic-blue/50 hover:cursor-pointer transition duration-300 ease-in-out hover:scale-110'>
               Learn more&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight} />
             </div>
