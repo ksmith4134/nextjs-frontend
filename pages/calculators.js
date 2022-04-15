@@ -26,31 +26,31 @@ export default function Calculators() {
   }
 
   return (
-      <div className="bg-gradient-to-b from-gray-800 to-gray-900 h-full">
+      <div className="bg-gradient-to-b from-white to-gray-200 h-full">
         <div className="w-10/12 mx-auto pt-28">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-bold text-6xl text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via bg-purple-500 to-pink-500">Breakeven Calculator</h2>
-            <p className="mt-6 text-center text-xl text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt porro ipsum iste earum nesciunt tempore praesentium temporibus dignissimos eum error hic voluptas consequuntur incidunt corporis.</p>
+            <h2 className="font-bold text-6xl text-center text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-cyan-400">Breakeven Calculator</h2>
+            <p className="mt-6 text-center text-xl text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt porro ipsum iste earum nesciunt tempore praesentium temporibus dignissimos.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-4 text-white mt-16">
-            <div className="bg-gray-900 rounded-2xl p-6 border-2 border-sky-500/50 shadow-md shadow-sky-500/50">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-4 text-gray-800 mt-16">
+            <div className="bg-white rounded-2xl p-6 border-2 border-gray-500/10 shadow-md shadow-gray-500/50">
               <CalcRangeSlider title={"Unit sales price"} description={"This is some description text. Lorem ipsum magna cillum pariatur consequat officia exercitation ullamco dolore."} min={0} max={100} step={1} startPosMid={false} currency={true} onChange={unitSalesPrice} />
             </div>
-            <div className="bg-gray-900 rounded-2xl p-6 border-2 border-sky-500/50 shadow-md shadow-sky-500/50">
+            <div className="bg-white rounded-2xl p-6 border-2 border-gray-500/10 shadow-md shadow-gray-500/50">
               <CalcRangeSlider title={"Fixed costs"} description={"This is some description text. Lorem ipsum magna cillum pariatur consequat officia exercitation ullamco dolore."} min={0} max={100} step={1} startPosMid={false} currency={true} onChange={fixedCosts} />
             </div>
-            <div className="bg-gray-900 rounded-2xl p-6 border-2 border-sky-500/50 shadow-md shadow-sky-500/50">
+            <div className="bg-white rounded-2xl p-6 border-2 border-gray-500/10 shadow-md shadow-gray-500/50">
               <CalcRangeSlider title={"Variable costs"} description={"This is some description text. Lorem ipsum magna cillum pariatur consequat officia exercitation ullamco dolore."} min={0} max={100} step={1} startPosMid={false} currency={true} onChange={variableCosts} />
             </div>
           </div>
           <div className="pt-20 pb-32">
-            <div className="flex mx-auto items-center max-w-[300px] rounded-xl p-6 bg-gradient-to-r from-blue-500 to-sky-500 border-2 border-sky-500 shadow-lg shadow-sky-500/20 text-white">
+            <div className="flex mx-auto items-center max-w-[300px] rounded-xl p-6 bg-gradient-to-r from-teal-300 to-cyan-400  shadow-lg shadow-cyan-500/20 text-white">
               <div className="flex justify-evenly items-center w-full">
                 <h2 className="text-3xl font-bold">Breakeven</h2>
                 <span className="text-3xl">{isNaN(fcValue/(uspValue-vcValue)) ? ("") : (isFinite(fcValue/(uspValue-vcValue)) ? (fcValue/(uspValue-vcValue)).toFixed(1) : "" )}</span>
               </div>
             </div>
-            <div className="text-3xl text-white text-center mx-auto mt-4">
+            <div className="text-3xl text-gray-600 text-center mx-auto mt-4">
               <FontAwesomeIcon data-tip data-for="unitsTip" icon={faCircleQuestion} className="" />
               <ReactTooltip id="unitsTip" place="top" effect="solid" className="bg-black text-white">
                 Units are time-based. For example, if your fixed and variable costs are measured over 1 month, the calculator shows how many months to breakeven.

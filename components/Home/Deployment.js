@@ -1,15 +1,15 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { faFolder, faFolderTree, faFolderOpen } from '@fortawesome/free-solid-svg-icons'
+import { faFolder, faFolderOpen } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Deployment() {
   return (
-    <div className="bg-white py-20">
+    <div className="bg-white pt-36 pb-36">
       <div className='sm:w-11/12 md:w-10/12 mx-auto'>
         <div className="text-center max-w-2xl mx-auto">
-          <Image src="/github_octokitty_purple.svg" width={100} height={100} />
-          <h2 className="text-5xl font-bold pb-2 mt-2 text-fuchsia-800">Deployed Using GitHub</h2>{/* bg-clip-text text-transparent bg-gradient-to-br from-[#ee00ff] to-[#620169] */}
+          <Image src="/github_octokitty.svg" width={100} height={100} />
+          <h2 className="text-5xl font-bold pb-2 mt-2">Deployed Using GitHub</h2>{/* bg-clip-text text-transparent bg-gradient-to-br from-[#ee00ff] to-[#620169] */}
           <h3 className="text-xl mt-2">Two GitHub repositories were used in the making of this site - one for the NEXT.js frontend, and one for the Strapi backend.</h3>
         </div>
 

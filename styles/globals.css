@@ -25,7 +25,7 @@
 
 /* HOMEPAGE DEPLOYMENT SECTION: HOVER ICON CHANGE */
 #img-spin-container {
-  --n:8;   /* number of item */
+  --n:8;   /* number of items */
   --d:30s; /* duration */
 
   width: 420px;
@@ -48,7 +48,7 @@
   width: 50px;
   height: 50px;
   text-align: center;
-  border: 2px solid rgba(222, 222, 222, 0.758);
+  border: 1px solid rgba(222, 222, 222, 0.758);
   border-radius: 100%;
   background-color: white;
   animation: spin var(--d) linear infinite; 
@@ -68,6 +68,8 @@
 .img-spin:nth-child(7) {animation-delay:calc(-6*var(--d)/var(--n))}
 .img-spin:nth-child(8) {animation-delay:calc(-7*var(--d)/var(--n))}
 
+
+/* HOMEPAGE FOLDER ANIMATION */
 .folder:hover .folder-closed,
 .folder .folder-open {
     display: none;
@@ -75,6 +77,7 @@
 .folder:hover .folder-open {
     display: inline;
 }
+
 
 /* GSTOP VIAL ANIMATION */
 .graphs {

@@ -33,10 +33,10 @@ export default function Stack({ jamStack }) {
   }
 
   return (
-    <div className="bg-white pb-24">
+    <div className="bg-white pt-36">
       <div className='sm:w-11/12 md:w-10/12 mx-auto'>
         <div className="text-center">
-          <h2 className="text-5xl font-bold pt-24">My Jamstack</h2>
+          <h2 className="text-6xl font-bold">My Jamstack</h2>
           <h3 className="text-xl mt-4">Click below to learn how each technology was used in developing this site</h3>
         </div>
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 place-content-center'>
@@ -52,8 +52,8 @@ export default function Stack({ jamStack }) {
             ))
           }
         </div>
-        <Tech selected={selectedJam} jams={jamStack} />
       </div>
+      <Tech selected={selectedJam} jams={jamStack} />
     </div>
   )
 }

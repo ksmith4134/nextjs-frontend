@@ -28,7 +28,7 @@ export default function CalcSlider(props) {
 
   return (
     <div className=''>
-      <label htmlFor="customRange" className="font-bold text-3xl text-sky-400">{title}</label>
+      <label htmlFor="customRange" className="font-bold text-3xl text-gray-600">{title}</label>
       <p className="mt-3 text-sm">{description}</p>
       <div className="flex mt-6 items-center">
         <span className="pr-2 text-lg">{currency ? formatter.format(min) : min}</span>
@@ -36,7 +36,7 @@ export default function CalcSlider(props) {
         <span className="pl-2 text-lg">{currency ? formatter.format(max) : max}</span>
       </div>
       <div>
-        <p className='mt-6 text-lg text-center'><span className=' text-[#FC6BA5]'>{currency ? formatter.format(sliderValue) : sliderValue}</span></p>
+        <p className='mt-6 text-lg text-center'><span className=' text-[#d73878]'>{currency ? formatter.format(sliderValue) : sliderValue}</span></p>
       </div>
     </div>
   )

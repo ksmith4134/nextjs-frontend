@@ -3,7 +3,7 @@ import Nav from '../components/Nav'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <div className='w-full'>
       <Nav />
       <div>
         <Component {...pageProps} />
